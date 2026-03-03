@@ -8,7 +8,6 @@ function GuessInput({ handleClick }) {
       onSubmit={(event) => {
         event.preventDefault();
         handleClick(guess);
-        console.log({ guess });
         setGuess('');
       }}
     >

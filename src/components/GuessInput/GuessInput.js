@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GuessInput({ handleGuessSubmit }) {
+function GuessInput({ handleGuessSubmit, status }) {
   const [newGuess, setNewGuess] = React.useState('');
   return (
     <form
@@ -24,6 +24,7 @@ function GuessInput({ handleGuessSubmit }) {
         maxLength={5}
         minLength={5}
         required
+        disabled={status !== 'running'}
       />
     </form>
   );
